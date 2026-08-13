@@ -1,0 +1,188 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design system definition.
+ *
+ * The @theme inline block maps CSS custom properties to Tailwind utility
+ * classes (e.g. --color-primary -> bg-primary, text-primary).
+ *
+ * The :root and .dark blocks define the actual color values using oklch.
+ * All colors MUST use oklch format.
+ *
+ * To add a new semantic color:
+ * 1. Add the variable to :root (light value) and .dark (dark value)
+ * 2. Register it in @theme inline as --color-<name>: var(--<name>)
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --font-heading: "Lora", "Georgia", serif;
+  --font-body: "Nunito Sans", "Inter", sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.625rem;
+
+  /* Warm Sand palette */
+  --background: oklch(from #faf8f5 l c h);
+  --foreground: oklch(from #3d3a34 l c h);
+  --card: oklch(from #ffffff l c h);
+  --card-foreground: oklch(from #3d3a34 l c h);
+  --popover: oklch(from #ffffff l c h);
+  --popover-foreground: oklch(from #3d3a34 l c h);
+  --primary: oklch(from #8b7355 l c h);
+  --primary-foreground: oklch(from #faf8f5 l c h);
+  --secondary: oklch(from #f0ebe3 l c h);
+  --secondary-foreground: oklch(from #5c5346 l c h);
+  --muted: oklch(from #f0ebe3 l c h);
+  --muted-foreground: oklch(from #7a6f60 l c h);
+  --accent: oklch(from #c9b99a l c h);
+  --accent-foreground: oklch(from #3d3a34 l c h);
+  --destructive: oklch(from #a94442 l c h);
+  --destructive-foreground: oklch(from #faf8f5 l c h);
+  --border: oklch(from #e8e0d5 l c h);
+  --input: oklch(from #e8e0d5 l c h);
+  --ring: oklch(from #8b7355 l c h);
+  --chart-1: oklch(from #8b7355 l c h);
+  --chart-2: oklch(from #c9b99a l c h);
+  --chart-3: oklch(from #7a6f60 l c h);
+  --chart-4: oklch(from #5c5346 l c h);
+  --chart-5: oklch(from #f0ebe3 l c h);
+  --sidebar: oklch(from #f5f0ea l c h);
+  --sidebar-foreground: oklch(from #3d3a34 l c h);
+  --sidebar-primary: oklch(from #8b7355 l c h);
+  --sidebar-primary-foreground: oklch(from #faf8f5 l c h);
+  --sidebar-accent: oklch(from #f0ebe3 l c h);
+  --sidebar-accent-foreground: oklch(from #5c5346 l c h);
+  --sidebar-border: oklch(from #e8e0d5 l c h);
+  --sidebar-ring: oklch(from #8b7355 l c h);
+}
+
+.dark {
+  --background: oklch(from #2b2722 l c h);
+  --foreground: oklch(from #faf8f5 l c h);
+  --card: oklch(from #3d3a34 l c h);
+  --card-foreground: oklch(from #faf8f5 l c h);
+  --popover: oklch(from #3d3a34 l c h);
+  --popover-foreground: oklch(from #faf8f5 l c h);
+  --primary: oklch(from #c9b99a l c h);
+  --primary-foreground: oklch(from #2b2722 l c h);
+  --secondary: oklch(from #4a443b l c h);
+  --secondary-foreground: oklch(from #faf8f5 l c h);
+  --muted: oklch(from #4a443b l c h);
+  --muted-foreground: oklch(from #d9d2c7 l c h);
+  --accent: oklch(from #8b7355 l c h);
+  --accent-foreground: oklch(from #faf8f5 l c h);
+  --destructive: oklch(from #d67b79 l c h);
+  --destructive-foreground: oklch(from #faf8f5 l c h);
+  --border: oklch(from #4a443b / 60% l c h);
+  --input: oklch(from #4a443b / 60% l c h);
+  --ring: oklch(from #c9b99a l c h);
+  --chart-1: oklch(from #c9b99a l c h);
+  --chart-2: oklch(from #8b7355 l c h);
+  --chart-3: oklch(from #d9d2c7 l c h);
+  --chart-4: oklch(from #b0a596 l c h);
+  --chart-5: oklch(from #4a443b l c h);
+  --sidebar: oklch(from #3d3a34 l c h);
+  --sidebar-foreground: oklch(from #faf8f5 l c h);
+  --sidebar-primary: oklch(from #c9b99a l c h);
+  --sidebar-primary-foreground: oklch(from #2b2722 l c h);
+  --sidebar-accent: oklch(from #4a443b l c h);
+  --sidebar-accent-foreground: oklch(from #faf8f5 l c h);
+  --sidebar-border: oklch(from #4a443b / 60% l c h);
+  --sidebar-ring: oklch(from #c9b99a l c h);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+.container-tight {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-tight {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-tight {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
