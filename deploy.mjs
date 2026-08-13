@@ -43,6 +43,17 @@ function deploy() {
   console.log(`Account ID: ${process.env.CLOUDFLARE_ACCOUNT_ID}\n`);
 
   const serverDir = path.join(__dirname, '.output', 'server');
+  const wranglerJsonPath = path.join(serverDir, 'wrangler.json');
+  if (fs.existsSync(wranglerJsonPath)) {
+    try {
+      const config = JSON.parse(fs.readFileSync(wranglerJsonPath, 'utf-8'));
+      config.name = 'tanstack-start-ts';
+      fs.writeFileSync(wranglerJsonPath, JSON.stringify(config, null, 2));
+      console.log('Set Cloudflare Worker name to: tanstack-start-ts');
+    } catch (err) {
+      console.warn('Could not update wrangler.json worker name:', err);
+    }
+  }
   
   // Use node to run wrangler on Windows
   execFile('npx', ['wrangler', 'deploy', '--config', 'wrangler.json'], {
