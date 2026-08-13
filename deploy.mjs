@@ -45,7 +45,7 @@ function deploy() {
   const serverDir = path.join(__dirname, '.output', 'server');
   
   // Use node to run wrangler on Windows
-  execFile('npx', ['wrangler', 'deploy'], {
+  execFile('npx', ['wrangler', 'deploy', '--config', 'wrangler.json'], {
     cwd: serverDir,
     stdio: 'inherit',
     env: process.env,
