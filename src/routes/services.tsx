@@ -6,9 +6,17 @@ export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
       { title: "Services | TRUST LINE INTERIORS" },
-      { name: "description", content: "Interior design services for apartments, villas, independent houses, and custom furniture." },
+      {
+        name: "description",
+        content:
+          "Interior design services for apartments, villas, independent houses, and custom furniture.",
+      },
       { property: "og:title", content: "Services | TRUST LINE INTERIORS" },
-      { property: "og:description", content: "Interior design services for apartments, villas, independent houses, and custom furniture." },
+      {
+        property: "og:description",
+        content:
+          "Interior design services for apartments, villas, independent houses, and custom furniture.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -21,32 +29,38 @@ const services = [
   {
     icon: Home,
     title: "Full home interiors",
-    description: "Complete design and execution for apartments, villas, and independent houses from concept to handover.",
+    description:
+      "Complete design and execution for apartments, villas, and independent houses from concept to handover.",
   },
   {
     icon: TreePine,
     title: "Woodwork & panelling",
-    description: "Custom wardrobes, TV units, wall panelling, ceilings, and partitions in premium wood finishes.",
+    description:
+      "Custom wardrobes, TV units, wall panelling, ceilings, and partitions in premium wood finishes.",
   },
   {
     icon: Sofa,
     title: "Furniture design",
-    description: "Bespoke sofas, beds, dining sets, and accent pieces built to match your space and style.",
+    description:
+      "Bespoke sofas, beds, dining sets, and accent pieces built to match your space and style.",
   },
   {
     icon: Palette,
     title: "Material & colour consultancy",
-    description: "Curated palettes for paints, veneers, tiles, fabrics, and hardware that feel cohesive.",
+    description:
+      "Curated palettes for paints, veneers, tiles, fabrics, and hardware that feel cohesive.",
   },
   {
     icon: Ruler,
     title: "Space planning",
-    description: "Smart layouts that improve circulation, storage, and natural light for every room.",
+    description:
+      "Smart layouts that improve circulation, storage, and natural light for every room.",
   },
   {
     icon: Hammer,
     title: "Site supervision",
-    description: "Regular site visits and quality checks to make sure the finished space matches the design.",
+    description:
+      "Regular site visits and quality checks to make sure the finished space matches the design.",
   },
 ];
 
@@ -72,14 +86,18 @@ function Services() {
               <div className="inline-flex rounded-lg bg-secondary p-3 text-primary">
                 <service.icon className="h-6 w-6" />
               </div>
-              <h3 className="mt-4 font-heading text-xl font-semibold text-card-foreground">{service.title}</h3>
+              <h3 className="mt-4 font-heading text-xl font-semibold text-card-foreground">
+                {service.title}
+              </h3>
               <p className="mt-2 text-sm text-muted-foreground">{service.description}</p>
             </div>
           ))}
         </div>
 
         <div className="mt-16 rounded-xl bg-secondary p-8 text-center md:p-12">
-          <h2 className="font-heading text-2xl font-semibold text-foreground">Not sure where to start?</h2>
+          <h2 className="font-heading text-2xl font-semibold text-foreground">
+            Not sure where to start?
+          </h2>
           <p className="mt-2 text-muted-foreground">
             Book a free consultation and we will help you plan your project step by step.
           </p>

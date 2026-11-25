@@ -6,9 +6,17 @@ export const Route = createFileRoute("/projects")({
   head: () => ({
     meta: [
       { title: "Projects | TRUST LINE INTERIORS" },
-      { name: "description", content: "Browse our portfolio of wood-forward interiors for apartments, villas, and independent homes." },
+      {
+        name: "description",
+        content:
+          "Browse our portfolio of wood-forward interiors for apartments, villas, and independent homes.",
+      },
       { property: "og:title", content: "Projects | TRUST LINE INTERIORS" },
-      { property: "og:description", content: "Browse our portfolio of wood-forward interiors for apartments, villas, and independent homes." },
+      {
+        property: "og:description",
+        content:
+          "Browse our portfolio of wood-forward interiors for apartments, villas, and independent homes.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -34,7 +42,8 @@ const projects = [
     id: 2,
     title: "Mediterranean villa",
     location: "Villa, Gachibowli",
-    description: "Exposed wooden beams and vaulted ceilings create a grand yet inviting living space.",
+    description:
+      "Exposed wooden beams and vaulted ceilings create a grand yet inviting living space.",
     image: project2,
   },
   {
@@ -76,7 +85,8 @@ function Projects() {
             Our projects
           </h1>
           <p className="mt-4 text-lg text-muted-foreground">
-            A selection of interiors we have designed and executed for apartments, villas, and independent homes.
+            A selection of interiors we have designed and executed for apartments, villas, and
+            independent homes.
           </p>
         </div>
 
@@ -97,8 +107,12 @@ function Projects() {
                 />
               </div>
               <div className="p-5">
-                <p className="text-xs font-medium uppercase tracking-wide text-primary">{project.location}</p>
-                <h3 className="mt-1 font-heading text-xl font-semibold text-card-foreground">{project.title}</h3>
+                <p className="text-xs font-medium uppercase tracking-wide text-primary">
+                  {project.location}
+                </p>
+                <h3 className="mt-1 font-heading text-xl font-semibold text-card-foreground">
+                  {project.title}
+                </h3>
                 <p className="mt-2 text-sm text-muted-foreground">{project.description}</p>
               </div>
             </article>

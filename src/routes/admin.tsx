@@ -86,7 +86,8 @@ function AdminEnquiries() {
             className="w-full sm:w-96 rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground outline-none focus:ring-2 focus:ring-ring"
           />
           <div className="text-xs text-muted-foreground">
-            Total records: <span className="font-semibold text-foreground">{filteredEnquiries.length}</span>
+            Total records:{" "}
+            <span className="font-semibold text-foreground">{filteredEnquiries.length}</span>
           </div>
         </div>
 
@@ -108,7 +109,9 @@ function AdminEnquiries() {
             </div>
           ) : filteredEnquiries.length === 0 ? (
             <div className="p-12 text-center text-muted-foreground">
-              {searchTerm ? "No matching enquiries found." : "No enquiries stored in MongoDB yet. Submit a test enquiry on the Contact page!"}
+              {searchTerm
+                ? "No matching enquiries found."
+                : "No enquiries stored in MongoDB yet. Submit a test enquiry on the Contact page!"}
             </div>
           ) : (
             <div className="overflow-x-auto">
@@ -128,17 +131,29 @@ function AdminEnquiries() {
                   {filteredEnquiries.map((item) => (
                     <tr key={item.id} className="hover:bg-secondary/20 transition-colors">
                       <td className="px-4 py-3 text-xs text-muted-foreground whitespace-nowrap">
-                        {new Date(item.createdAt).toLocaleDateString()} {new Date(item.createdAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
+                        {new Date(item.createdAt).toLocaleDateString()}{" "}
+                        {new Date(item.createdAt).toLocaleTimeString([], {
+                          hour: "2-digit",
+                          minute: "2-digit",
+                        })}
                       </td>
-                      <td className="px-4 py-3 font-medium text-foreground whitespace-nowrap">{item.name}</td>
-                      <td className="px-4 py-3 text-foreground whitespace-nowrap font-mono text-xs">{item.phone}</td>
-                      <td className="px-4 py-3 text-muted-foreground whitespace-nowrap">{item.email || "—"}</td>
+                      <td className="px-4 py-3 font-medium text-foreground whitespace-nowrap">
+                        {item.name}
+                      </td>
+                      <td className="px-4 py-3 text-foreground whitespace-nowrap font-mono text-xs">
+                        {item.phone}
+                      </td>
+                      <td className="px-4 py-3 text-muted-foreground whitespace-nowrap">
+                        {item.email || "—"}
+                      </td>
                       <td className="px-4 py-3 text-foreground whitespace-nowrap">
                         <span className="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">
                           {item.project}
                         </span>
                       </td>
-                      <td className="px-4 py-3 text-muted-foreground max-w-xs truncate">{item.message || "—"}</td>
+                      <td className="px-4 py-3 text-muted-foreground max-w-xs truncate">
+                        {item.message || "—"}
+                      </td>
                       <td className="px-4 py-3 whitespace-nowrap">
                         <span className="inline-flex items-center rounded-full bg-emerald-500/10 px-2 py-0.5 text-xs font-medium text-emerald-600 dark:text-emerald-400">
                           {item.status}

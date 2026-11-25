@@ -77,22 +77,45 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "TRUST LINE INTERIORS | Warm, Wood-Forward Interiors" },
-      { name: "description", content: "Interior design studio for apartments, villas, and independent houses. Custom woodwork and furniture in warm, inviting spaces." },
+      {
+        name: "description",
+        content:
+          "Interior design studio for apartments, villas, and independent houses. Custom woodwork and furniture in warm, inviting spaces.",
+      },
       { name: "author", content: "TRUST LINE INTERIORS" },
       { property: "og:title", content: "TRUST LINE INTERIORS | Warm, Wood-Forward Interiors" },
-      { property: "og:description", content: "Interior design studio for apartments, villas, and independent houses. Custom woodwork and furniture in warm, inviting spaces." },
+      {
+        property: "og:description",
+        content:
+          "Interior design studio for apartments, villas, and independent houses. Custom woodwork and furniture in warm, inviting spaces.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@woodandspace" },
       { name: "twitter:title", content: "TRUST LINE INTERIORS | Warm, Wood-Forward Interiors" },
-      { name: "twitter:description", content: "Interior design studio for apartments, villas, and independent houses. Custom woodwork and furniture in warm, inviting spaces." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/77dd8f92-725d-4715-9224-57e3bc0a3159" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/77dd8f92-725d-4715-9224-57e3bc0a3159" },
+      {
+        name: "twitter:description",
+        content:
+          "Interior design studio for apartments, villas, and independent houses. Custom woodwork and furniture in warm, inviting spaces.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/77dd8f92-725d-4715-9224-57e3bc0a3159",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/77dd8f92-725d-4715-9224-57e3bc0a3159",
+      },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Nunito+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Nunito+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap",
+      },
       { rel: "stylesheet", href: appCss },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],

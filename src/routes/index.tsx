@@ -6,9 +6,17 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "TRUST LINE INTERIORS | Warm, Wood-Forward Interiors" },
-      { name: "description", content: "Interior design studio for apartments, villas, and independent houses. Custom woodwork and furniture in warm, inviting spaces." },
+      {
+        name: "description",
+        content:
+          "Interior design studio for apartments, villas, and independent houses. Custom woodwork and furniture in warm, inviting spaces.",
+      },
       { property: "og:title", content: "TRUST LINE INTERIORS | Warm, Wood-Forward Interiors" },
-      { property: "og:description", content: "Interior design studio for apartments, villas, and independent houses. Custom woodwork and furniture in warm, inviting spaces." },
+      {
+        property: "og:description",
+        content:
+          "Interior design studio for apartments, villas, and independent houses. Custom woodwork and furniture in warm, inviting spaces.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -55,15 +63,16 @@ function Index() {
       <section className="container-tight py-12 md:py-20">
         <div className="grid items-center gap-10 lg:grid-cols-2">
           <div className="order-2 lg:order-1">
-            <p className="text-sm font-medium uppercase tracking-wide text-primary">TRUST LINE INTERIORS</p>
+            <p className="text-sm font-medium uppercase tracking-wide text-primary">
+              TRUST LINE INTERIORS
+            </p>
             <h1 className="mt-4 text-4xl font-semibold leading-tight tracking-tight text-foreground md:text-5xl lg:text-6xl">
               Warm interiors rooted in wood and craft
             </h1>
-            <p className="mt-6 text-lg italic text-primary">
-              where trust meets passion
-            </p>
+            <p className="mt-6 text-lg italic text-primary">where trust meets passion</p>
             <p className="mt-4 text-lg text-muted-foreground">
-              We design and execute wood-forward interiors for apartments, villas, and independent houses — complete with custom furniture that feels like home.
+              We design and execute wood-forward interiors for apartments, villas, and independent
+              houses — complete with custom furniture that feels like home.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
@@ -110,7 +119,9 @@ function Index() {
                 key={service}
                 className="rounded-xl border border-border bg-card p-6 text-center"
               >
-                <h3 className="font-heading text-lg font-semibold text-card-foreground">{service}</h3>
+                <h3 className="font-heading text-lg font-semibold text-card-foreground">
+                  {service}
+                </h3>
               </div>
             ))}
           </div>
@@ -162,8 +173,12 @@ function Index() {
                 />
               </div>
               <div className="p-5">
-                <p className="text-xs font-medium uppercase tracking-wide text-primary">{project.location}</p>
-                <h3 className="mt-1 font-heading text-xl font-semibold text-card-foreground">{project.title}</h3>
+                <p className="text-xs font-medium uppercase tracking-wide text-primary">
+                  {project.location}
+                </p>
+                <h3 className="mt-1 font-heading text-xl font-semibold text-card-foreground">
+                  {project.title}
+                </h3>
               </div>
             </article>
           ))}
@@ -178,7 +193,8 @@ function Index() {
               Loved by homeowners
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              “They transformed our 3BHK into a warm, magazine-worthy home. The woodwork quality is outstanding and the team was easy to work with.”
+              “They transformed our 3BHK into a warm, magazine-worthy home. The woodwork quality is
+              outstanding and the team was easy to work with.”
             </p>
             <p className="mt-4 font-heading text-sm font-semibold text-foreground">Ananya Reddy</p>
             <p className="text-xs text-muted-foreground">Apartment owner, Madhapur</p>
@@ -201,7 +217,8 @@ function Index() {
             Ready to design your home?
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-primary-foreground/80">
-            Share your space with us and we will help you plan interiors that feel warm, personal, and timeless.
+            Share your space with us and we will help you plan interiors that feel warm, personal,
+            and timeless.
           </p>
           <Link
             to="/contact"

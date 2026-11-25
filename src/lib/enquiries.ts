@@ -52,7 +52,9 @@ export const getEnquiries = createServerFn({ method: "GET" }).handler(async () =
         project: item.project,
         message: item.message || "",
         status: item.status,
-        createdAt: item.createdAt ? new Date(item.createdAt).toISOString() : new Date().toISOString(),
+        createdAt: item.createdAt
+          ? new Date(item.createdAt).toISOString()
+          : new Date().toISOString(),
       })),
     };
   } catch (error: unknown) {

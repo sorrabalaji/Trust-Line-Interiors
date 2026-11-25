@@ -11,9 +11,17 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact | TRUST LINE INTERIORS" },
-      { name: "description", content: "Book a free consultation with TRUST LINE INTERIORS for your apartment, villa, or independent home project." },
+      {
+        name: "description",
+        content:
+          "Book a free consultation with TRUST LINE INTERIORS for your apartment, villa, or independent home project.",
+      },
       { property: "og:title", content: "Contact | TRUST LINE INTERIORS" },
-      { property: "og:description", content: "Book a free consultation with TRUST LINE INTERIORS for your apartment, villa, or independent home project." },
+      {
+        property: "og:description",
+        content:
+          "Book a free consultation with TRUST LINE INTERIORS for your apartment, villa, or independent home project.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -55,7 +63,13 @@ function Contact() {
     }
   }
 
-  async function saveToDb(payload: { name: string; phone: string; email?: string; project: string; message?: string }) {
+  async function saveToDb(payload: {
+    name: string;
+    phone: string;
+    email?: string;
+    project: string;
+    message?: string;
+  }) {
     try {
       const res = await submitEnquiry({ data: payload });
       if (res && res.success) {
@@ -105,7 +119,6 @@ function Contact() {
     setSent(true);
   }
 
-
   return (
     <Layout>
       <section className="container-tight py-16 md:py-24">
@@ -118,11 +131,12 @@ function Contact() {
           </p>
         </div>
 
-
         <div className="mt-12 grid gap-10 md:grid-cols-2">
           <div className="space-y-8">
             <div>
-              <h2 className="font-heading text-xl font-semibold text-foreground">Contact details</h2>
+              <h2 className="font-heading text-xl font-semibold text-foreground">
+                Contact details
+              </h2>
               <address className="mt-4 not-italic text-muted-foreground">
                 <p className="font-medium text-foreground">Email</p>
                 <p className="mt-1">sorrabalaji@gmail.com</p>
@@ -140,7 +154,10 @@ function Contact() {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="rounded-xl border border-border bg-card p-6 shadow-sm">
+          <form
+            onSubmit={handleSubmit}
+            className="rounded-xl border border-border bg-card p-6 shadow-sm"
+          >
             <div className="grid gap-4">
               <div className="grid gap-2">
                 <label htmlFor="name" className="text-sm font-medium text-card-foreground">
@@ -222,7 +239,8 @@ function Contact() {
                 {isSubmitting ? "Saving & opening Email..." : "Send enquiry by email"}
               </button>
               <p className="text-sm text-muted-foreground">
-                Submissions are stored safely in our database, and open WhatsApp or your email app with a prefilled message.
+                Submissions are stored safely in our database, and open WhatsApp or your email app
+                with a prefilled message.
               </p>
               {dbSaved && (
                 <div className="rounded-md bg-emerald-500/10 p-3 text-xs font-medium text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
@@ -232,8 +250,8 @@ function Contact() {
               {sent && (
                 <div className="text-sm font-medium text-primary space-y-1">
                   <p>
-                    Thanks! The enquiry window is open — please send it from WhatsApp or your mail app.
-                    We reply within 10 to 15 minutes.
+                    Thanks! The enquiry window is open — please send it from WhatsApp or your mail
+                    app. We reply within 10 to 15 minutes.
                   </p>
                   {waLink && (
                     <p className="font-normal text-muted-foreground">
@@ -253,7 +271,6 @@ function Contact() {
               )}
             </div>
           </form>
-
         </div>
       </section>
     </Layout>

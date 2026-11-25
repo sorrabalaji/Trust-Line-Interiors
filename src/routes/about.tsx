@@ -6,9 +6,17 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About Us | TRUST LINE INTERIORS" },
-      { name: "description", content: "Meet the interior design studio behind warm, wood-forward apartments, villas, and independent homes." },
+      {
+        name: "description",
+        content:
+          "Meet the interior design studio behind warm, wood-forward apartments, villas, and independent homes.",
+      },
       { property: "og:title", content: "About Us | TRUST LINE INTERIORS" },
-      { property: "og:description", content: "Meet the interior design studio behind warm, wood-forward apartments, villas, and independent homes." },
+      {
+        property: "og:description",
+        content:
+          "Meet the interior design studio behind warm, wood-forward apartments, villas, and independent homes.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -25,11 +33,11 @@ function About() {
           <h1 className="text-4xl font-semibold tracking-tight text-foreground md:text-5xl">
             About TRUST LINE INTERIORS
           </h1>
-          <p className="mt-4 text-lg italic text-primary">
-            where trust meets passion
-          </p>
+          <p className="mt-4 text-lg italic text-primary">where trust meets passion</p>
           <p className="mt-4 text-lg text-muted-foreground">
-            We believe interiors should feel like home the moment you walk in. Our studio designs warm, wood-forward spaces for apartments, villas, and independent houses across the city.
+            Founded by S.PARASHURAM, TRUST LINE INTERIORS designs warm, wood-forward spaces for
+            apartments, villas, and independent houses across the city. We believe interiors should
+            feel like home the moment you walk in.
           </p>
         </div>
 
@@ -44,21 +52,31 @@ function About() {
           />
           <div className="space-y-6">
             <div>
-              <h2 className="font-heading text-2xl font-semibold text-foreground">Craft-first approach</h2>
+              <h2 className="font-heading text-2xl font-semibold text-foreground">
+                Craft-first approach
+              </h2>
               <p className="mt-2 text-muted-foreground">
-                From custom woodwork to furniture selection, every detail is chosen for quality, warmth, and longevity. We partner with skilled carpenters and fabricators to bring designs to life.
+                From custom woodwork to furniture selection, every detail is chosen for quality,
+                warmth, and longevity. We partner with skilled carpenters and fabricators to bring
+                designs to life.
               </p>
             </div>
             <div>
-              <h2 className="font-heading text-2xl font-semibold text-foreground">Spaces that breathe</h2>
+              <h2 className="font-heading text-2xl font-semibold text-foreground">
+                Spaces that breathe
+              </h2>
               <p className="mt-2 text-muted-foreground">
-                Whether it is a compact apartment or a sprawling villa, we plan layouts that maximize natural light, airflow, and everyday comfort.
+                Whether it is a compact apartment or a sprawling villa, we plan layouts that
+                maximize natural light, airflow, and everyday comfort.
               </p>
             </div>
             <div>
-              <h2 className="font-heading text-2xl font-semibold text-foreground">End-to-end service</h2>
+              <h2 className="font-heading text-2xl font-semibold text-foreground">
+                End-to-end service
+              </h2>
               <p className="mt-2 text-muted-foreground">
-                We handle everything from concept and 3D visualisation to site execution and final styling, so you can enjoy the process without the stress.
+                We handle everything from concept and 3D visualisation to site execution and final
+                styling, so you can enjoy the process without the stress.
               </p>
             </div>
           </div>
@@ -67,8 +85,8 @@ function About() {
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {[
             { number: "120+", label: "Projects completed" },
-            { number: "8+", label: "Years of experience" },
-            { number: "35+", label: "Carpentry partners" },
+            { number: "25+", label: "Years of experience" },
+            { number: "15", label: "Carpentry partners" },
             { number: "100%", label: "Client satisfaction" },
           ].map((stat) => (
             <div key={stat.label} className="rounded-xl bg-secondary p-6 text-center">

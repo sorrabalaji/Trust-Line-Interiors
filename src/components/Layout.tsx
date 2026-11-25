@@ -100,7 +100,8 @@ function Footer() {
               </span>
             </Link>
             <p className="mt-4 max-w-xs text-sm text-muted-foreground">
-              Interior design studio crafting warm, wood-forward spaces for apartments, villas, and independent homes.
+              Interior design studio crafting warm, wood-forward spaces for apartments, villas, and
+              independent homes.
             </p>
           </div>
 
